@@ -9,15 +9,16 @@
 ## Step by step
 Start from a base Debian 12 installation. All necessary packages will be installed through the following commands.
 ```markdown
+timedatectl set-timezone Asia/Bangkok
 apt-get update
 apt-get upgrade
-apt -y install build-essential git curl wget libnewt-dev libssl-dev libncurses5-dev subversion libsqlite3-dev libjansson-dev libxml2-dev uuid-dev default-libmysqlclient-dev htop sngrep lame ffmpeg mpg123
-apt -y install git vim curl wget libnewt-dev libssl-dev libncurses5-dev subversion libsqlite3-dev build-essential libjansson-dev libxml2-dev uuid-dev expect cron libedit*
+apt-get -y install build-essential git curl wget libnewt-dev libssl-dev libncurses5-dev subversion libsqlite3-dev libjansson-dev libxml2-dev uuid-dev default-libmysqlclient-dev htop sngrep lame ffmpeg mpg123
+apt-get -y install git vim curl wget libnewt-dev libssl-dev libncurses5-dev subversion libsqlite3-dev build-essential libjansson-dev libxml2-dev uuid-dev expect cron libedit*
 ```
 ## PHP 8.2 Installation
 First, download the GPG key.
 ```markdown
-apt -y install lsb-release apt-transport-https ca-certificates 
+apt-get -y install lsb-release apt-transport-https ca-certificates 
 wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg
 ```
 Next, add SURY to the repository.
@@ -76,7 +77,7 @@ rm /var/www/html/index.html
 ## Install and Configure ODBC
 Installing Build Dependencies on Linux
 ```markdown
-sudo apt-get install git cmake make gcc libssl-dev unixodbc odbcinst unixodbc-dev
+apt-get install git cmake make gcc libssl-dev unixodbc odbcinst unixodbc-dev
 ```
 Building MariaDB Connector/ODBC from the Git Repository
 ```markdown

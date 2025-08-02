@@ -7,7 +7,7 @@
 6. ARM64 platform
 
 ## Step by step
-Start from a base Debian 12 installation. All necessary packages will be installed through the following commands.
+Start from a base Debian 12 installation. All necessary packages will be installed using the following commands.
 ```markdown
 timedatectl set-timezone Asia/Bangkok
 apt-get update
@@ -64,7 +64,7 @@ sed -i 's|;rungroup|rungroup|' /etc/asterisk/asterisk.conf
 echo "/usr/lib64" >> /etc/ld.so.conf.d/x86_64-linux-gnu.conf
 ldconfig
 ```
-Configure Apache web server
+Configure the Apache web server
 ```markdown
 sed -i 's/\(^upload_max_filesize = \).*/\120M/' /etc/php/8.2/apache2/php.ini
 sed -i 's/\(^memory_limit = \).*/\1256M/' /etc/php/8.2/apache2/php.ini
@@ -148,7 +148,7 @@ EOF
 systemctl daemon-reload
 systemctl enable freepbx
 ```
-## Cradit
+## Credit
 1. https://sangomakb.atlassian.net/wiki/spaces/FP/pages/10682545/How+to+Install+FreePBX+17+on+Debian+12+with+Asterisk+21
 2. https://wiki.crowncloud.net/?How_to_install_PHP_8_on_Debian_12
 3. https://mariadb.com/docs/connectors/mariadb-connector-odbc/building-mariadb-connectorodbc-from-source

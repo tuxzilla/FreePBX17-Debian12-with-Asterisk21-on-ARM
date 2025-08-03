@@ -4,7 +4,7 @@
 3. PHP 8.2
 4. Maria DB (v10.11)
 5. Node JS (v18.16)
-6. ARM64 platform
+6. aarch64 platform
 
 ## Step by step
 Start from a base Debian 12 installation. All necessary packages will be installed using the following commands.
@@ -61,7 +61,7 @@ sed -i 's|#AST_USER|AST_USER|' /etc/default/asterisk
 sed -i 's|#AST_GROUP|AST_GROUP|' /etc/default/asterisk
 sed -i 's|;runuser|runuser|' /etc/asterisk/asterisk.conf
 sed -i 's|;rungroup|rungroup|' /etc/asterisk/asterisk.conf
-echo "/usr/lib64" >> /etc/ld.so.conf.d/x86_64-linux-gnu.conf
+echo "/usr/lib64" >> /etc/ld.so.conf.d/aarch64-linux-gnu.conf
 ldconfig
 ```
 Configure the Apache web server

@@ -12,7 +12,7 @@ Start from a base Debian 12 installation. All necessary packages will be install
 timedatectl set-timezone Asia/Bangkok
 apt-get update
 apt-get upgrade
-apt-get -y install build-essential git curl wget libnewt-dev libssl-dev libncurses5-dev subversion libsqlite3-dev libjansson-dev libxml2-dev uuid-dev default-libmysqlclient-dev htop sngrep lame ffmpeg mpg123 expect cron libedit*
+apt-get -y install build-essential cmake git curl wget libnewt-dev libssl-dev libncurses5-dev subversion libsqlite3-dev libjansson-dev libxml2-dev uuid-dev default-libmysqlclient-dev htop sngrep lame ffmpeg mpg123 expect cron libedit*
 ```
 ## PHP 8.2 Installation
 ```markdown
@@ -62,10 +62,7 @@ systemctl restart apache2
 rm /var/www/html/index.html
 ```
 ## Install and Configure ODBC
-Installing Build Dependencies on Linux
-```markdown
-apt-get install git cmake make gcc libssl-dev unixodbc odbcinst unixodbc-dev
-```
+
 Building MariaDB Connector/ODBC from the Git Repository
 ```markdown
 git clone https://github.com/MariaDB/mariadb-connector-odbc.git

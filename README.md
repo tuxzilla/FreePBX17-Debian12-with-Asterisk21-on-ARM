@@ -1,10 +1,10 @@
 # This manual-install method builds a FreePBX system with the following specifications:
 1. FreePBX 17
-2. Asterisk  21
+2. Asterisk 22
 3. PHP 8.2
 4. Maria DB (v10.11)
 5. Node JS (v18.16)
-6. aarch64 platform
+6. arm64 platform
 
 ## Step by step
 Start from a base Debian 12 installation. All necessary packages will be installed using the following commands.
@@ -22,9 +22,9 @@ apt-get install -y linux-headers-arm64 openssh-server apache2 mariadb-server mar
 Download Asterisk source and compile
 ```markdown
 cd /usr/src
-wget http://downloads.asterisk.org/pub/telephony/asterisk/asterisk-21-current.tar.gz
-tar xvf asterisk-21-current.tar.gz
-cd asterisk-21*/
+wget http://downloads.asterisk.org/pub/telephony/asterisk/asterisk-22-current.tar.gz
+tar xvf asterisk-22-current.tar.gz
+cd asterisk-22*/
 contrib/scripts/get_mp3_source.sh
 contrib/scripts/install_prereq install
 ./configure  --libdir=/usr/lib64 --with-pjproject-bundled --with-jansson-bundled
@@ -134,5 +134,4 @@ systemctl enable freepbx
 ```
 ## Credit
 1. https://sangomakb.atlassian.net/wiki/spaces/FP/pages/10682545/How+to+Install+FreePBX+17+on+Debian+12+with+Asterisk+21
-2. https://wiki.crowncloud.net/?How_to_install_PHP_8_on_Debian_12
-3. https://mariadb.com/docs/connectors/mariadb-connector-odbc/building-mariadb-connectorodbc-from-source
+2. https://mariadb.com/docs/connectors/mariadb-connector-odbc/building-mariadb-connectorodbc-from-source

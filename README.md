@@ -1,9 +1,9 @@
-# This manual-install method builds a FreePBX system with the following specifications:
+# This manual-install method builds a FreePBX system on Debian 12 (Bookworm) with the following specifications:
 1. FreePBX 17
 2. Asterisk 22
 3. PHP 8.2
 4. Maria DB (v10.11)
-5. Node JS (v18.16)
+5. Node JS (v18.19)
 6. arm64 platform
 
 ## Step by step
